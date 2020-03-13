@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MP3Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="left-bar">
+        <div id="playlist-button"></div>
+    </div>
+
+    <div id="albums" class="scroll">
+
+    </div>
+
+    <div id="songs">
+        <h1> MP3 Player - Dominik Smęda 2019</h1>
+        <div id="content" class="scroll">
+
+        </div>
+
+    </div>
+
+    <div id="audio-player">
+        <audio id="audio">
+            <source src="" id="audio_src" type="audio/mp3" />
+        </audio>
+
+    </div>
+
+    <div id="visualizer">
+
+    </div>
+
+    <script src="libs/three.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Net.js"></script>
+    <script src="Music.js"></script>
+    <script src="UI.js"></script>
+    <script src="Visual.js"></script>
+    <script>
+        var net;
+        var ui;
+        var music;
+        $(document).ready(function () {
+            net = new Net()
+            ui = new UI()
+            music = new Music();
+            visual = new Visual();
+            $("html, body").scrollTop(0)
+
+        });
+
+    </script>
+
+</body>
+
+</html>
